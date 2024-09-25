@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1> HELLOOOO CHINGU, I KNOW NA STRESS KA THIS PAST DAY </h1>
+    </center>
+    <input type="text" placeholder="How's life treating you?" id="TEXT" />
+    <button type="submit" id="SUBMIT"> SUBMIT </button>
+
+    <p id="message"> I Know na maraming balikad sa daan patungo sa mga pangarap na gusto mo, <br> gusto ko lang ipaalala
+        sa iyo na lahat ng nararamdaman mo ay may kapalit na kasiyahan. <br> Lagi mo lang pipiliin maging masaya araw at
+        kapag wala ka na makausap <br> you can text me and we can have a bonding, And always remeber na lagi ka rin
+        magpahinga. <br>Take care always and have a good night!^^ </p>
+    <video width="620" height="440" controls id="video">
+        <source src="hello.mp4" type="video/mp4">
+
+    </video>
+
+    <p id="MUSIC"> LISTEN TO THIS MUSICCC :>> </p>
+</body>
+
+<style>
+    #TEXT {
+        background-color: white;
+        border: solid 1px;
+        position: absolute;
+        left: 50vh;
+        width: 100vh;
+        height: 5vh;
+        font-size: large;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    #SUBMIT {
+        background-color: white;
+        border: solid 2px;
+        position: absolute;
+        left: 50vh;
+        top: 15vh;
+        border-radius: 20px;
+        height: 50px;
+        width: 13vh;
+        cursor: pointer;
+    }
+
+    #message {
+        position: absolute;
+        top: 37%;
+        left: 24%;
+        font-family: cursive, sans-serif;
+        font-size: larger;
+    }
+
+    #video {
+        position: absolute;
+        bottom: 20px;
+        left: 34%;
+        border-radius: 50px;
+    }
+
+    #MUSIC {
+        position: absolute;
+        bottom: 20px;
+        left: 10%;
+        font-family: cursive, sans-serif;
+        font-size: larger;
+    } 
+
+    @media screen and (max-width: 800px){
+        #TEXT {
+       
+        position: absolute;
+        left: 3vh;
+        width: 40vh;
+        height: 5vh;
+        font-size: large;
+        font-weight: bold;
+        padding-left: 10px;
+    } 
+    #SUBMIT {
+        
+        position: absolute;
+        left: 3vh;
+        top: 25vh;
+        border-radius: 20px;
+        height: 50px;
+        width: 13vh;
+        cursor: pointer;
+    } 
+
+    #message {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        font-family: cursive, sans-serif;
+        font-size: 14px;
+    } 
+
+    #video {
+        position: absolute;
+        bottom: 18vh;
+        left: 12%;
+        border-radius: 50px;
+        width: 300px;
+        height: 300px;
+    }
+    #MUSIC {
+        position: absolute;
+        bottom: 10vh;
+        left: 13%;
+        font-family: cursive, sans-serif;
+        font-size: larger;
+    } 
+    
+    }
+</style>
+
+<script>
+
+    let button = document.getElementById("SUBMIT");
+    let text = document.getElementById("TEXT");
+    let messageElement = document.getElementById("message");
+    messageElement.hidden = true;
+    document.getElementById("video").hidden = true;
+    document.getElementById("MUSIC").hidden = true;
+    button.addEventListener("click", function () {
+        const txt = text.value.trim();
+        if (txt === "") {
+            alert("MAG LAGAY KAAAAAA");
+        } else if (txt.length < 20) {
+            alert("SURE KA?? AYAN LANG?? PWEDE KA MAG VENT SA AKIN^^");
+
+        } else {
+            messageElement.hidden = false;
+            document.getElementById("video").hidden = false;
+            document.getElementById("MUSIC").hidden = false;
+        }
+    });
+
+</script>
+
+</html>
